@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a4187">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Projetos - Gabriel de Camargo Santolaja</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="glass-morphism mini-header">
+    <nav>
+      <a href="./index.html" class="nav-link" onclick="window.location.href='./index.html'"><i
+          class="fas fa-arrow-left"></i> Voltar ao Início</a>
+      <h1>Meus Projetos</h1>
+    </nav>
+  </header>
+
+  <!-- Projetos Grid -->
+  <section class="container projects-page">
+    <div class="projects-grid">
+      <!-- Mario Project -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img src="./logo.mario.png" alt="Projeto Mario">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Super Mario Website</h3>
+          <p>Mario Bros, para quem quer um trabalho de encanamento excelente, rápido e seguro.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/Mario" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('mario')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conversor Project -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.y8Llcy1-JhK5PXWgRhDDkAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Conversor de Moedas">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>React</span>
+              <span>CSS</span>
+              <span>API</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Conversor de Moedas</h3>
+          <p>Um web site de Conversor de moedas com responsividade e dados em tempo real.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fas fa-code"></i> API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/Conversor-moeda" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('conversor')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Previsão do Tempo -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+            alt="Previsão do Tempo">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>API</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Previsão do Tempo Mundial</h3>
+          <p>Aplicação web que mostra a previsão do tempo em tempo real para qualquer cidade do mundo, utilizando dados
+            meteorológicos precisos.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-badge"><i class="fas fa-cloud"></i> Weather API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/Previsao-do-tempo-do-mundo" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('weather')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Apple -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1621768216002-5ac171876625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+            alt="Projeto Apple">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>API</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Apple</h3>
+          <p>Aplicação web que mostra informações sobre produtos da Apple, utilizando dados da API da Apple.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-badge"><i class="fas fa-cloud"></i> Apple API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/Apple" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('apple')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Projeto Nike -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Projeto Nike">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Nike</h3>
+          <p>Landing page moderna inspirada na Nike com design responsivo e animações interativas.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/projeto-nike" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('nike')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto TrevalAgency -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="TrevalAgency">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>C#</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>TrevalAgency</h3>
+          <p>Agência de viagens moderna com design responsivo, oferecendo experiências únicas e destinos incríveis ao
+            redor do mundo.</p>
+                    <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-badge"><i class="fas fa-code"></i> C#</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/TrevalAgency" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('treval')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto GS-Moda-Masculina -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/80/cc/ee/lanx-warehouse-shop.jpg?w=900&h=500&s=1" alt="GS Moda Masculina">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>GS-Moda-Masculina</h3>
+          <p>Loja virtual responsiva para moda masculina com catálogo de produtos e layout otimizado para conversões.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/GabrielSantolaja/GS-Moda-Masculina" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('moda')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Tech-Store -->
+      <div class="project-card glass-morphism">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Tech Store">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Tech-Store</h3>
+          <p>Loja online de eletrônicos com catálogo responsivo e carrinho de compras.</p>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/gabrielsantolaja/tech-store" class="btn-github" target="_blank">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('techstore')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template para Novo Projeto -->
+      <div class="project-card glass-morphism new-project">
+        <div class="new-project-content">
+          <i class="fas fa-plus-circle"></i>
+          <h3>Novo Projeto em Breve</h3>
+          <p>Estou sempre desenvolvendo novos projetos. Fique ligado!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass-morphism">
+    <div class="footer-content">
+      <p>&copy; 2025 - Desenvolvido com <i class="fas fa-heart"></i> por Gabriel de Camargo Santolaja</p>
+      <div class="social-links">
+        <a href="https://github.com/GabrielSantolaja" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="http://www.linkedin.com/in/gabriel-santolaja" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Preview -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Título do Projeto</h2>
+        <button class="close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="preview-container">
+          <img id="modalImage" src="" alt="Preview do Projeto" class="preview-image">
+          <div class="preview-info">
+            <div class="preview-description">
+              <h3>Sobre o Projeto</h3>
+              <p id="modalDescription">Descrição do projeto...</p>
+            </div>
+            <div class="preview-features">
+              <h3>Funcionalidades</h3>
+              <ul id="modalFeatures">
+                <!-- Features serão inseridas dinamicamente -->
+              </ul>
+            </div>
+            <div class="preview-tech">
+              <h3>Tecnologias Utilizadas</h3>
+              <div id="modalTechStack" class="tech-stack">
+                <!-- Tech stack será inserida dinamicamente -->
+              </div>
+            </div>
+          </div>
+          <div class="preview-links">
+            <a id="modalGithubLink" href="#" target="_blank" class="btn-github">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <a id="modalDemoLink" href="#" target="_blank" class="btn-demo">
+              <i class="fas fa-external-link-alt"></i> Ver Demo Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

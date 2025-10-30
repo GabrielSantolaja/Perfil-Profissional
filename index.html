@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a4187">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Portfólio - Gabriel de Camargo Santolaja</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="glass-morphism">
+    <div class="profile-header">
+      <div class="profile-pic-container">
+        <img src="./perfil (1).jpg" alt="Foto de perfil de Gabriel" class="profile-pic" loading="lazy">
+        <div class="profile-pic-overlay">
+          <i class="fas fa-code"></i>
+        </div>
+      </div>
+      <div class="header-text">
+        <h1>Gabriel de Camargo Santolaja</h1>
+        <p class="typewriter">Desenvolvedor-Programador Front-End</p>
+        <div class="tech-stack">
+          <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+          <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+          <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <a href="#sobre" class="nav-link"><i class="fas fa-user"></i> Sobre</a>
+      <a href="#projetos" class="nav-link"><i class="fas fa-code-branch"></i> Projetos</a>
+      <a href="#contato" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+  </header>
+
+  <!-- Sobre -->
+  <section id="sobre" class="container">
+    <h2>Sobre mim</h2>
+    <p>
+      Olá! Sou desenvolvedor front-end apaixonado por criar interfaces modernas,
+      responsivas e otimizadas. Trabalho com HTML, CSS, JavaScript e React para
+      transformar ideias em sites incríveis.
+    </p>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="container glass-morphism">
+    <h2><i class="fas fa-laptop-code"></i> Projetos</h2>
+    <div class="grid">
+      <!-- Super Mario -->
+      <article class="card">
+        <div class="card-image">
+          <img src="./logo.mario.png" alt="Projeto Mario" loading="lazy">
+          <div class="card-overlay" aria-hidden="true">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Super Mario Website</h3>
+          <p>Mario Bros, para quem quer um trabalho de encanamento excelente, rápido e seguro.</p>
+          <div class="card-links">
+            <a href="https://github.com/GabrielSantolaja/Mario" class="btn-github" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('mario')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Projeto Nike (corrigido: src definido) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Nike" loading="lazy">
+          <div class="card-overlay" aria-hidden="true">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Nike</h3>
+          <p>Landing page moderna inspirada na Nike com design responsivo e animações interativas.</p>
+          <div class="card-links">
+            <a href="https://github.com/GabrielSantolaja/projeto-nike" class="btn-github" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('nike')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- TrevalAgency -->
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="TrevalAgency" loading="lazy">
+          <div class="card-overlay" aria-hidden="true">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>C#</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>TrevalAgency</h3>
+          <p>Agência de viagens moderna com design responsivo, oferecendo experiências únicas e destinos incríveis.</p>
+          <div class="card-links">
+            <a href="https://github.com/GabrielSantolaja/TrevalAgency" class="btn-github" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <button class="btn-demo" onclick="openModal('treval')">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <a href="projetos.html" class="view-all-projects">
+      Ver Todos os Projetos <i class="fas fa-arrow-right"></i>
+    </a>
+  </section>
+
+  <!-- Contato (corrigido: removido </a> extra e preenchido cards) -->
+  <section id="contato" class="container glass-morphism">
+    <h2><i class="fas fa-paper-plane"></i> Contato</h2>
+    <div class="contact-grid">
+      <a href="mailto:gabriel.santolaja@email.com" class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>gabscript97@email.com</p>
+      </a>
+
+      <a href="http://www.linkedin.com/in/gabriel-santolaja" class="contact-card" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+        <h3>LinkedIn</h3>
+        <p>gabriel-santolaja</p>
+      </a>
+
+      <a href="https://github.com/GabrielSantolaja" class="contact-card" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+        <p>GabrielSantolaja</p>
+      </a>
+
+      <a href="https://wa.me/5519987743878?text=Olá%20Gabriel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." class="contact-card" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p>(19) 98774-3878</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass-morphism">
+    <div class="footer-content">
+      <p>&copy; 2025 - Desenvolvido com <i class="fas fa-heart"></i> por Gabriel de Camargo Santolaja</p>
+      <div class="social-links">
+        <a href="https://github.com/GabrielSantolaja" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="http://www.linkedin.com/in/gabriel-santolaja" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Preview -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Título do Projeto</h2>
+        <button class="close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="preview-container">
+          <img id="modalImage" src="" alt="Preview do Projeto" class="preview-image">
+          <div class="preview-info">
+            <div class="preview-description">
+              <h3>Sobre o Projeto</h3>
+              <p id="modalDescription">Descrição do projeto...</p>
+            </div>
+            <div class="preview-features">
+              <h3>Funcionalidades</h3>
+              <ul id="modalFeatures">
+                <!-- Features serão inseridas dinamicamente -->
+              </ul>
+            </div>
+            <div class="preview-tech">
+              <h3>Tecnologias Utilizadas</h3>
+              <div id="modalTechStack" class="tech-stack">
+                <!-- Tech stack será inserida dinamicamente -->
+              </div>
+            </div>
+          </div>
+          <div class="preview-links">
+            <a id="modalGithubLink" href="#" target="_blank" class="btn-github">
+              <i class="fab fa-github"></i> Ver Código
+            </a>
+            <a id="modalDemoLink" href="#" target="_blank" class="btn-demo">
+              <i class="fas fa-external-link-alt"></i> Ver Demo Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
