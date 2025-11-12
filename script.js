@@ -144,7 +144,7 @@ const projectsData = {
   },
   barbearia: {
     title: "Barbearia GS Moderna",
-    description: "Sistema completo de gestão para barbearias com design moderno e funcionalidades avançadas. Inclui dashboard inteligente com métricas em tempo real, gestão de agenda, clientes e relatórios detalhados.",
+    description: "Painel administrativo completo para gestão de barbearias com design moderno e funcionalidades avançadas. Sistema profissional que inclui dashboard inteligente com métricas em tempo real, gestão de agenda, controle de clientes e relatórios detalhados para tomada de decisões estratégicas.",
     image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     features: [
       "Dashboard com KPIs e gráficos em tempo real",
