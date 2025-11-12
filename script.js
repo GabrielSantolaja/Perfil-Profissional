@@ -141,6 +141,22 @@ const projectsData = {
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB"],
     githubLink: "https://github.com/gabrielsantolaja/tech-store",
     demoLink: "https://gabrielsantolaja.github.io/tech-store/"
+  },
+  barbearia: {
+    title: "Barbearia GS Moderna",
+    description: "Sistema completo de gestão para barbearias com design moderno e funcionalidades avançadas. Inclui dashboard inteligente com métricas em tempo real, gestão de agenda, clientes e relatórios detalhados.",
+    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Dashboard com KPIs e gráficos em tempo real",
+      "Sistema de agendamentos online",
+      "Gestão completa de clientes",
+      "Relatórios avançados com exportação CSV",
+      "Interface responsiva e moderna",
+      "Integração com Firebase Firestore"
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript ES6+", "Firebase", "Chart.js"],
+    githubLink: "https://github.com/GabrielSantolaja/barbearia-gs-moderna",
+    demoLink: "https://gabrielsantolaja.github.io/barbearia-gs-moderna/"
   }
 };
 
