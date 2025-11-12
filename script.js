@@ -157,6 +157,23 @@ const projectsData = {
     tech: ["HTML5", "CSS3", "JavaScript ES6+", "Firebase", "Chart.js"],
     githubLink: "https://github.com/GabrielSantolaja/barbearia-gs-moderna",
     demoLink: "https://gabrielsantolaja.github.io/barbearia-gs-moderna/"
+  },
+  vitrine: {
+    title: "Vitrine Barbearia GS",
+    description: "Website premium e elegante para barbearia com design moderno e sofisticado. Apresenta sistema completo de agendamento online integrado ao Firebase, catálogo visual de serviços, seção de depoimentos e integração direta com WhatsApp para facilitar o contato com clientes.",
+    image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Design premium com efeito glassmorphism",
+      "Sistema de agendamento online com Firebase",
+      "Catálogo visual de serviços com preços",
+      "Seção de depoimentos de clientes",
+      "Integração WhatsApp para contato direto",
+      "Layout totalmente responsivo",
+      "Animações suaves e modernas"
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript ES6+", "Firebase Auth", "Firebase Firestore"],
+    githubLink: "https://github.com/GabrielSantolaja/barbearia-gs-vitrine",
+    demoLink: "https://gabrielsantolaja.github.io/barbearia-gs-vitrine/"
   }
 };
 
