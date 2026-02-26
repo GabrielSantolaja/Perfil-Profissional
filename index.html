@@ -28,11 +28,20 @@
       <div class="header-text">
         <h1>Gabriel de Camargo Santolaja</h1>
         <p class="typewriter">Desenvolvedor-Programador Front-End</p>
+        <p class="value-text">Sites profissionais focados em performance, confiança e conversão de clientes.</p>
         <div class="tech-stack">
           <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
           <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
           <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
           <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+        </div>
+        <div class="hero-actions">
+          <a href="https://wa.me/5519987743878?text=Olá%20Gabriel!%20Quero%20um%20site%20profissional%20para%20meu%20negócio." class="btn-demo" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+          </a>
+          <a href="#projetos" class="btn-github">
+            <i class="fas fa-briefcase"></i> Ver Trabalhos
+          </a>
         </div>
       </div>
     </div>
@@ -58,7 +67,7 @@
     <h2><i class="fas fa-laptop-code"></i> Projetos</h2>
     <div class="grid">
       <!-- Super Mario -->
-      <article class="card">
+      <article class="card" data-project="mario">
         <div class="card-image">
           <img src="./logo.mario.png" alt="Projeto Mario" loading="lazy">
           <div class="card-overlay" aria-hidden="true">
@@ -72,6 +81,10 @@
         <div class="card-content">
           <h3>Super Mario Website</h3>
           <p>Mario Bros, para quem quer um trabalho de encanamento excelente, rápido e seguro.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
           <div class="card-links">
             <a href="https://github.com/GabrielSantolaja/Mario" class="btn-github" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i> Ver Código
@@ -84,7 +97,7 @@
       </article>
 
       <!-- Projeto Nike (corrigido: src definido) -->
-      <article class="card">
+      <article class="card" data-project="nike">
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Nike" loading="lazy">
           <div class="card-overlay" aria-hidden="true">
@@ -98,6 +111,10 @@
         <div class="card-content">
           <h3>Projeto Nike</h3>
           <p>Landing page moderna inspirada na Nike com design responsivo e animações interativas.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
           <div class="card-links">
             <a href="https://github.com/GabrielSantolaja/projeto-nike" class="btn-github" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i> Ver Código
@@ -110,7 +127,7 @@
       </article>
 
       <!-- TrevalAgency -->
-      <article class="card">
+      <article class="card" data-project="treval">
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="TrevalAgency" loading="lazy">
           <div class="card-overlay" aria-hidden="true">
@@ -125,6 +142,10 @@
         <div class="card-content">
           <h3>TrevalAgency</h3>
           <p>Agência de viagens moderna com design responsivo, oferecendo experiências únicas e destinos incríveis.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
           <div class="card-links">
             <a href="https://github.com/GabrielSantolaja/TrevalAgency" class="btn-github" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i> Ver Código
@@ -193,6 +214,11 @@
       <div class="modal-body">
         <div class="preview-container">
           <img id="modalImage" src="" alt="Preview do Projeto" class="preview-image">
+          <div class="live-preview-box">
+            <h3><i class="fas fa-desktop"></i> Prévia ao vivo</h3>
+            <iframe id="modalLiveFrame" class="live-preview-frame" title="Prévia ao vivo do projeto" loading="lazy"></iframe>
+            <p class="live-preview-note">Se a prévia não carregar, clique em <strong>Ver Demo Live</strong> para abrir em nova aba.</p>
+          </div>
           <div class="preview-info">
             <div class="preview-description">
               <h3>Sobre o Projeto</h3>

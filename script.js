@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = 'https://via.placeholder.com/800x500?text=Imagem+Indispon%C3%ADvel';
     });
   });
+
+  renderProjectQuickPreview();
 });
 
 // Dados dos projetos para o modal
@@ -177,6 +179,25 @@ const projectsData = {
   }
 };
 
+function renderProjectQuickPreview() {
+  const cards = document.querySelectorAll('[data-project]');
+
+  cards.forEach(card => {
+    const projectId = card.getAttribute('data-project');
+    const project = projectsData[projectId];
+    const list = card.querySelector('.project-preview-list');
+
+    if (!project || !list) return;
+
+    list.innerHTML = '';
+    project.features.slice(0, 3).forEach(feature => {
+      const li = document.createElement('li');
+      li.innerHTML = `<i class="fas fa-check-circle"></i> ${feature}`;
+      list.appendChild(li);
+    });
+  });
+}
+
 // Função para abrir o modal
 function openModal(projectId) {
   const project = projectsData[projectId];
@@ -190,6 +211,7 @@ function openModal(projectId) {
   const modalTechStack = document.getElementById('modalTechStack');
   const modalGithubLink = document.getElementById('modalGithubLink');
   const modalDemoLink = document.getElementById('modalDemoLink');
+  const modalLiveFrame = document.getElementById('modalLiveFrame');
 
   // Preencher dados do modal
   modalTitle.textContent = project.title;
@@ -217,6 +239,9 @@ function openModal(projectId) {
   // Atualizar links
   modalGithubLink.href = project.githubLink;
   modalDemoLink.href = project.demoLink;
+  if (modalLiveFrame) {
+    modalLiveFrame.src = project.demoLink;
+  }
 
   // Mostrar modal
   modal.style.display = 'block';
@@ -226,8 +251,12 @@ function openModal(projectId) {
 // Função para fechar o modal
 function closeModal() {
   const modal = document.getElementById('projectModal');
+  const modalLiveFrame = document.getElementById('modalLiveFrame');
   modal.style.display = 'none';
   document.body.style.overflow = 'auto';
+  if (modalLiveFrame) {
+    modalLiveFrame.src = '';
+  }
 }
 
 // Fechar modal clicando fora dele

@@ -57,6 +57,25 @@ header {
     flex-wrap: wrap;
 }
 
+.value-text {
+    max-width: 560px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.98rem;
+    margin-top: 0.75rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.1rem;
+}
+
+.hero-actions .btn-github,
+.hero-actions .btn-demo {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .profile-pic-container {
     position: relative;
     width: 180px;
@@ -299,6 +318,43 @@ h2 i {
     margin-bottom: 1.5rem;
 }
 
+.project-preview {
+    background: rgba(26, 65, 135, 0.08);
+    border: 1px solid rgba(26, 65, 135, 0.18);
+    border-radius: 14px;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-preview h4 {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-preview-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.project-preview-list li {
+    font-size: 0.86rem;
+    color: #2f3a4f;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+
+.project-preview-list li i {
+    color: var(--primary-color);
+    margin-top: 0.2rem;
+}
+
 .card-links {
     display: flex;
     gap: 1rem;
@@ -463,6 +519,7 @@ footer {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(17, 32, 61, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -557,6 +614,14 @@ footer {
 
     .header-text {
         text-align: center;
+    }
+
+    .value-text {
+        margin: 0.75rem auto 0;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 
     .tech-stack {
@@ -854,6 +919,35 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.live-preview-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.live-preview-box h3 {
+    color: #64b5f6;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.live-preview-frame {
+    width: 100%;
+    min-height: 340px;
+    border: 0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.live-preview-note {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.86rem;
+    margin-top: 0.75rem;
+}
+
 .preview-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -975,5 +1069,9 @@ footer {
     
     .preview-links {
         flex-direction: column;
+    }
+
+    .live-preview-frame {
+        min-height: 240px;
     }
 }
