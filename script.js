@@ -19,8 +19,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Habilita animacao de reveal apenas quando o JS estiver ativo.
+  document.body.classList.add('enable-reveal');
+
+  // Revela seções e cards enquanto o usuario rola a pagina.
+  setupScrollReveal();
+
   renderProjectQuickPreview();
 });
+
+function setupScrollReveal() {
+  const revealTargets = document.querySelectorAll('section, .contact-card, footer');
+
+  revealTargets.forEach(target => target.classList.add('reveal-on-scroll'));
+
+  if (!('IntersectionObserver' in window)) {
+    revealTargets.forEach(target => target.classList.add('revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('revealed');
+      currentObserver.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: '0px 0px -60px 0px'
+  });
+
+  revealTargets.forEach(target => observer.observe(target));
+}
 
 // Dados dos projetos para o modal
 const projectsData = {
@@ -176,6 +206,66 @@ const projectsData = {
     tech: ["HTML5", "CSS3", "JavaScript ES6+", "Firebase Auth", "Firebase Firestore"],
     githubLink: "https://github.com/GabrielSantolaja/barbearia-gs-vitrine",
     demoLink: "https://gabrielsantolaja.github.io/barbearia-gs-vitrine/"
+  },
+  pizza: {
+    title: "Projeto Pizza",
+    description: "Landing page para pizzaria com apresentação visual forte, foco em cardápio e chamada para pedido rápido.",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Hero com destaque para oferta principal",
+      "Seção de sabores e cardápio visual",
+      "Layout responsivo para mobile",
+      "CTA de pedido em destaque",
+      "Interface leve e moderna"
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    githubLink: "https://github.com/GabrielSantolaja/Pizza",
+    demoLink: "https://gabrielsantolaja.github.io/Pizza/"
+  },
+  odonto: {
+    title: "Projeto Odonto",
+    description: "Site para clínica odontológica com visual profissional, serviços em destaque e CTA para agendamento rápido.",
+    image: "https://images.pexels.com/photos/6812478/pexels-photo-6812478.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    features: [
+      "Layout clean para transmitir confiança",
+      "Serviços organizados por especialidade",
+      "CTA de agendamento visível",
+      "Design responsivo para mobile",
+      "Navegação simples e objetiva"
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    githubLink: "https://github.com/GabrielSantolaja/Odonto",
+    demoLink: "https://gabrielsantolaja.github.io/Odonto/"
+  },
+  salao: {
+    title: "Projeto Salao Beleza",
+    description: "Website para salao de beleza com apresentacao premium, servicos organizados e CTA de agendamento.",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Hero elegante com proposta clara",
+      "Secoes de servicos e beneficios",
+      "Layout responsivo para mobile",
+      "Chamada para agendamento rapido",
+      "Visual moderno e sofisticado"
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    githubLink: "https://github.com/GabrielSantolaja/Sal-o-Beleza",
+    demoLink: "https://gabrielsantolaja.github.io/Sal-o-Beleza/"
+  },
+  concessionaria: {
+    title: "Projeto Concessionaria",
+    description: "Site para concessionaria de carros e motos com visual forte, oferta clara e CTA de contato.",
+    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    features: [
+      "Vitrine de veiculos em destaque",
+      "Secoes para carros e motos",
+      "Layout responsivo e objetivo",
+      "CTA direto para atendimento",
+      "Interface comercial moderna"
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    githubLink: "https://github.com/GabrielSantolaja/Concessionaria",
+    demoLink: "https://gabrielsantolaja.github.io/Concessionaria/"
   }
 };
 
@@ -198,54 +288,12 @@ function renderProjectQuickPreview() {
   });
 }
 
-// Função para abrir o modal
+// Abre diretamente o demo do projeto para mostrar o site sem etapas intermediarias.
 function openModal(projectId) {
   const project = projectsData[projectId];
   if (!project) return;
 
-  const modal = document.getElementById('projectModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalImage = document.getElementById('modalImage');
-  const modalDescription = document.getElementById('modalDescription');
-  const modalFeatures = document.getElementById('modalFeatures');
-  const modalTechStack = document.getElementById('modalTechStack');
-  const modalGithubLink = document.getElementById('modalGithubLink');
-  const modalDemoLink = document.getElementById('modalDemoLink');
-  const modalLiveFrame = document.getElementById('modalLiveFrame');
-
-  // Preencher dados do modal
-  modalTitle.textContent = project.title;
-  modalImage.src = project.image;
-  modalImage.alt = `Preview do ${project.title}`;
-  modalDescription.textContent = project.description;
-
-  // Limpar e preencher features
-  modalFeatures.innerHTML = '';
-  project.features.forEach(feature => {
-    const li = document.createElement('li');
-    li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
-    modalFeatures.appendChild(li);
-  });
-
-  // Limpar e preencher tech stack
-  modalTechStack.innerHTML = '';
-  project.tech.forEach(tech => {
-    const span = document.createElement('span');
-    span.className = 'tech-badge';
-    span.innerHTML = `<i class="fas fa-code"></i> ${tech}`;
-    modalTechStack.appendChild(span);
-  });
-
-  // Atualizar links
-  modalGithubLink.href = project.githubLink;
-  modalDemoLink.href = project.demoLink;
-  if (modalLiveFrame) {
-    modalLiveFrame.src = project.demoLink;
-  }
-
-  // Mostrar modal
-  modal.style.display = 'block';
-  document.body.style.overflow = 'hidden';
+  window.location.href = project.demoLink;
 }
 
 // Função para fechar o modal

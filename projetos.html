@@ -12,7 +12,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +31,7 @@
   <section class="container projects-page">
     <div class="projects-grid">
       <!-- Mario Project -->
-      <div class="project-card glass-morphism" data-project="mario">
+      <div id="mario" class="project-card glass-morphism" data-project="mario">
         <div class="card-image">
           <img src="./logo.mario.png" alt="Projeto Mario">
           <div class="card-overlay">
@@ -53,18 +55,15 @@
             <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/Mario" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('mario')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Mario/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Conversor Project -->
-      <div class="project-card glass-morphism" data-project="conversor">
+      <div id="conversor" class="project-card glass-morphism" data-project="conversor">
         <div class="card-image">
           <img src="https://tse2.mm.bing.net/th/id/OIP.y8Llcy1-JhK5PXWgRhDDkAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
             alt="Conversor de Moedas">
@@ -89,18 +88,15 @@
             <span class="tech-badge"><i class="fas fa-code"></i> API</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/Conversor-moeda" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('conversor')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Conversor-moeda/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto Previsão do Tempo -->
-      <div class="project-card glass-morphism" data-project="weather">
+      <div id="weather" class="project-card glass-morphism" data-project="weather">
         <div class="card-image">
           <img
             src="https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
@@ -129,18 +125,15 @@
             <span class="tech-badge"><i class="fas fa-cloud"></i> Weather API</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/Previsao-do-tempo-do-mundo" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('weather')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Previsao-do-tempo-do-mundo/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto Apple -->
-      <div class="project-card glass-morphism" data-project="apple">
+      <div id="apple" class="project-card glass-morphism" data-project="apple">
         <div class="card-image">
           <img
             src="https://images.unsplash.com/photo-1621768216002-5ac171876625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
@@ -168,12 +161,9 @@
             <span class="tech-badge"><i class="fas fa-cloud"></i> Apple API</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/Apple" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('apple')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Apple/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -181,7 +171,7 @@
 
 
       <!-- Projeto Nike -->
-      <div class="project-card glass-morphism" data-project="nike">
+      <div id="nike" class="project-card glass-morphism" data-project="nike">
         <div class="card-image">
           <img
             src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -207,18 +197,15 @@
             <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/projeto-nike" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('nike')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/projeto-nike/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto TrevalAgency -->
-      <div class="project-card glass-morphism" data-project="treval">
+      <div id="treval" class="project-card glass-morphism" data-project="treval">
         <div class="card-image">
           <img
             src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -247,18 +234,15 @@
             <span class="tech-badge"><i class="fas fa-code"></i> C#</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/TrevalAgency" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('treval')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/TrevalAgency/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto GS-Moda-Masculina -->
-      <div class="project-card glass-morphism" data-project="moda">
+      <div id="moda" class="project-card glass-morphism" data-project="moda">
         <div class="card-image">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/80/cc/ee/lanx-warehouse-shop.jpg?w=900&h=500&s=1" alt="GS Moda Masculina">
           <div class="card-overlay">
@@ -282,18 +266,15 @@
             <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/GS-Moda-Masculina" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('moda')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/GS-Moda-Masculina/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto Tech-Store -->
-      <div class="project-card glass-morphism" data-project="techstore">
+      <div id="techstore" class="project-card glass-morphism" data-project="techstore">
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Tech Store">
           <div class="card-overlay">
@@ -317,18 +298,15 @@
             <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/gabrielsantolaja/tech-store" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('techstore')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/tech-store/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto Barbearia GS Moderna -->
-      <div class="project-card glass-morphism" data-project="barbearia">
+      <div id="barbearia" class="project-card glass-morphism" data-project="barbearia">
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Barbearia GS Moderna">
           <div class="card-overlay">
@@ -354,18 +332,15 @@
             <span class="tech-badge"><i class="fas fa-database"></i> Firebase</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/barbearia-gs-moderna" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('barbearia')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/barbearia-gs-moderna/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Projeto Vitrine Barbearia GS -->
-      <div class="project-card glass-morphism" data-project="vitrine">
+      <div id="vitrine" class="project-card glass-morphism" data-project="vitrine">
         <div class="card-image">
           <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Vitrine Barbearia GS">
           <div class="card-overlay">
@@ -391,12 +366,137 @@
             <span class="tech-badge"><i class="fas fa-database"></i> Firebase</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/GabrielSantolaja/barbearia-gs-vitrine" class="btn-github" target="_blank">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('vitrine')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/barbearia-gs-vitrine/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Pizza -->
+      <div id="pizza" class="project-card glass-morphism" data-project="pizza">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Pizza">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Pizza</h3>
+          <p>Landing page temática para pizzaria com foco em apetite visual, oferta clara e conversão rápida.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Pizza/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Odonto -->
+      <div id="odonto" class="project-card glass-morphism" data-project="odonto">
+        <div class="card-image">
+          <img src="https://images.pexels.com/photos/6812478/pexels-photo-6812478.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Projeto Odonto">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Odonto</h3>
+          <p>Site para clínica odontológica com visual limpo, foco em credibilidade e chamadas de agendamento.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Odonto/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Salao Beleza -->
+      <div id="salao" class="project-card glass-morphism" data-project="salao">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Salao Beleza">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Salao Beleza</h3>
+          <p>Website para salao de beleza com foco em servicos, marca premium e agendamento rapido.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Sal-o-Beleza/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projeto Concessionaria -->
+      <div id="concessionaria" class="project-card glass-morphism" data-project="concessionaria">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Concessionaria">
+          <div class="card-overlay">
+            <div class="tech-used">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Projeto Concessionaria</h3>
+          <p>Website para concessionaria de carros e motos com vitrine moderna e foco em contato comercial.</p>
+          <div class="project-preview">
+            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
+            <ul class="project-preview-list"></ul>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Concessionaria/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
           </div>
         </div>
       </div>
@@ -457,9 +557,6 @@
             </div>
           </div>
           <div class="preview-links">
-            <a id="modalGithubLink" href="#" target="_blank" class="btn-github">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
             <a id="modalDemoLink" href="#" target="_blank" class="btn-demo">
               <i class="fas fa-external-link-alt"></i> Ver Demo Live
             </a>

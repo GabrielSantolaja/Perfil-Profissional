@@ -13,7 +13,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +23,7 @@
   <header class="glass-morphism">
     <div class="profile-header">
       <div class="profile-pic-container">
-        <img src="./perfil (1).jpg" alt="Foto de perfil de Gabriel" class="profile-pic" loading="lazy">
+        <img src="./Perfil.jpeg" alt="Foto de perfil de Gabriel" class="profile-pic" loading="lazy">
         <div class="profile-pic-overlay">
           <i class="fas fa-code"></i>
         </div>
@@ -47,113 +49,125 @@
       </div>
     </div>
     <nav>
-      <a href="#sobre" class="nav-link"><i class="fas fa-user"></i> Sobre</a>
       <a href="#projetos" class="nav-link"><i class="fas fa-code-branch"></i> Projetos</a>
+      <a href="#vitrine" class="nav-link"><i class="fas fa-grip-horizontal"></i> Vitrine</a>
       <a href="#contato" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
     </nav>
   </header>
 
-  <!-- Sobre -->
-  <section id="sobre" class="container">
-    <h2>Sobre mim</h2>
-    <p>
-      Olá! Sou desenvolvedor front-end apaixonado por criar interfaces modernas,
-      responsivas e otimizadas. Trabalho com HTML, CSS, JavaScript e React para
-      transformar ideias em sites incríveis.
-    </p>
+  <!-- Destaques -->
+  <section class="container showcase-intro glass-morphism">
+    <div class="showcase-copy">
+      <span class="section-kicker">Portfólio em destaque</span>
+      <h2>Projetos que vendem a experiência antes mesmo da conversa.</h2>
+      <p>Menos texto, mais prova visual. Abaixo estão os trabalhos que melhor mostram estilo, performance e acabamento profissional.</p>
+    </div>
+    <div class="showcase-metrics">
+      <div class="metric-card">
+        <strong>13+</strong>
+        <span>projetos publicados</span>
+      </div>
+      <div class="metric-card">
+        <strong>Front-End</strong>
+        <span>landing pages, vitrines e dashboards</span>
+      </div>
+      <div class="metric-card">
+        <strong>Visual premium</strong>
+        <span>foco em impacto, clareza e conversão</span>
+      </div>
+    </div>
   </section>
 
   <!-- Projetos -->
-  <section id="projetos" class="container glass-morphism">
-    <h2><i class="fas fa-laptop-code"></i> Projetos</h2>
+  <section id="projetos" class="container glass-morphism home-projects-minimal">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">Selecionados</span>
+        <h2><i class="fas fa-laptop-code"></i> Projetos</h2>
+      </div>
+      <a href="projetos.html" class="inline-link">Abrir portfólio completo <i class="fas fa-arrow-right"></i></a>
+    </div>
     <div class="grid">
-      <!-- Super Mario -->
-      <article class="card" data-project="mario">
+      <article class="card" data-project="moda">
         <div class="card-image">
-          <img src="./logo.mario.png" alt="Projeto Mario" loading="lazy">
-          <div class="card-overlay" aria-hidden="true">
-            <div class="tech-used">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-          </div>
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/80/cc/ee/lanx-warehouse-shop.jpg?w=900&h=500&s=1" alt="GS Moda Masculina" loading="lazy">
         </div>
         <div class="card-content">
-          <h3>Super Mario Website</h3>
-          <p>Mario Bros, para quem quer um trabalho de encanamento excelente, rápido e seguro.</p>
-          <div class="project-preview">
-            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
-            <ul class="project-preview-list"></ul>
-          </div>
+          <h3>GS-Moda-Masculina</h3>
           <div class="card-links">
-            <a href="https://github.com/GabrielSantolaja/Mario" class="btn-github" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('mario')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/GS-Moda-Masculina/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- Projeto Nike (corrigido: src definido) -->
-      <article class="card" data-project="nike">
+      <article class="card" data-project="pizza">
         <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Nike" loading="lazy">
-          <div class="card-overlay" aria-hidden="true">
-            <div class="tech-used">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-          </div>
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Pizza" loading="lazy">
         </div>
         <div class="card-content">
-          <h3>Projeto Nike</h3>
-          <p>Landing page moderna inspirada na Nike com design responsivo e animações interativas.</p>
-          <div class="project-preview">
-            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
-            <ul class="project-preview-list"></ul>
-          </div>
+          <h3>Projeto Pizza</h3>
           <div class="card-links">
-            <a href="https://github.com/GabrielSantolaja/projeto-nike" class="btn-github" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('nike')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Pizza/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- TrevalAgency -->
-      <article class="card" data-project="treval">
+      <article class="card" data-project="odonto">
         <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="TrevalAgency" loading="lazy">
-          <div class="card-overlay" aria-hidden="true">
-            <div class="tech-used">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>C#</span>
-            </div>
-          </div>
+          <img src="https://images.pexels.com/photos/6812478/pexels-photo-6812478.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Projeto Odonto" loading="lazy">
         </div>
         <div class="card-content">
-          <h3>TrevalAgency</h3>
-          <p>Agência de viagens moderna com design responsivo, oferecendo experiências únicas e destinos incríveis.</p>
-          <div class="project-preview">
-            <h4><i class="fas fa-eye"></i> Prévia rápida</h4>
-            <ul class="project-preview-list"></ul>
-          </div>
+          <h3>Projeto Odonto</h3>
           <div class="card-links">
-            <a href="https://github.com/GabrielSantolaja/TrevalAgency" class="btn-github" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
-            <button class="btn-demo" onclick="openModal('treval')">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Odonto/" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
-            </button>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-project="vitrine">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Vitrine Barbearia GS" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Vitrine Barbearia GS</h3>
+          <div class="card-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/barbearia-gs-vitrine/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-project="salao">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Salao Beleza" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Projeto Salao Beleza</h3>
+          <div class="card-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Sal-o-Beleza/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-project="concessionaria">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Projeto Concessionaria" loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>Projeto Concessionaria</h3>
+          <div class="card-links">
+            <a class="btn-demo" href="https://gabrielsantolaja.github.io/Concessionaria/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
           </div>
         </div>
       </article>
@@ -164,32 +178,68 @@
     </a>
   </section>
 
-  <!-- Contato (corrigido: removido </a> extra e preenchido cards) -->
-  <section id="contato" class="container glass-morphism">
-    <h2><i class="fas fa-paper-plane"></i> Contato</h2>
-    <div class="contact-grid">
-      <a href="mailto:gabriel.santolaja@email.com" class="contact-card">
-        <i class="fas fa-envelope"></i>
-        <h3>Email</h3>
-        <p>gabscript97@email.com</p>
-      </a>
+  <section id="vitrine" class="container glass-morphism experience-lab">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">Diferencial</span>
+        <h2><i class="fas fa-wave-square"></i> Experiência Que Vira Resultado</h2>
+      </div>
+      <p class="section-note">Em vez de repetir projetos, aqui está o método que transforma ideia em site que passa confiança e gera contato.</p>
+    </div>
 
-      <a href="http://www.linkedin.com/in/gabriel-santolaja" class="contact-card" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i>
-        <h3>LinkedIn</h3>
-        <p>gabriel-santolaja</p>
-      </a>
+    <div class="lab-grid">
+      <article class="stage-card">
+        <span class="stage-index">01</span>
+        <h3>Direção visual estratégica</h3>
+        <p>Definição de estilo, mensagem e hierarquia para o cliente entender valor em segundos.</p>
+      </article>
 
-      <a href="https://github.com/GabrielSantolaja" class="contact-card" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-        <h3>GitHub</h3>
-        <p>GabrielSantolaja</p>
-      </a>
+      <article class="stage-card">
+        <span class="stage-index">02</span>
+        <h3>Construção orientada à conversão</h3>
+        <p>Layout limpo, seções objetivas e CTA forte para transformar visita em conversa.</p>
+      </article>
 
-      <a href="https://wa.me/5519987743878?text=Olá%20Gabriel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." class="contact-card" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-        <h3>WhatsApp</h3>
-        <p>(19) 98774-3878</p>
+      <article class="stage-card">
+        <span class="stage-index">03</span>
+        <h3>Acabamento premium responsivo</h3>
+        <p>Performance, polimento visual e adaptação mobile para manter impacto em qualquer tela.</p>
+      </article>
+
+      <aside class="lab-orbit" aria-label="Pilares dos projetos">
+        <div class="orbit-core">Projetos focados em resultado</div>
+        <span class="orbit-tag orbit-tag-a">Visual forte</span>
+        <span class="orbit-tag orbit-tag-b">Leve e rápido</span>
+        <span class="orbit-tag orbit-tag-c">Conversão</span>
+        <span class="orbit-tag orbit-tag-d">Mobile first</span>
+      </aside>
+    </div>
+
+    <div class="lab-cta-row">
+      <a href="projetos.html" class="btn-demo">
+        <i class="fas fa-th-large"></i> Ver Portfólio Completo
+      </a>
+      <a href="https://wa.me/5519987743878?text=Ol%C3%A1%20Gabriel!%20Quero%20um%20site%20com%20esse%20padr%C3%A3o%20premium." class="btn-github" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Quero esse padrão no meu site
+      </a>
+    </div>
+  </section>
+
+  <section id="contato" class="container glass-morphism compact-cta">
+    <div>
+      <span class="section-kicker">Contato direto</span>
+      <h2><i class="fas fa-paper-plane"></i> Quer um site com esse nível de apresentação?</h2>
+      <p>Falo com você pelo canal que for mais rápido. Sem formulário longo, sem fricção.</p>
+    </div>
+    <div class="compact-cta-actions">
+      <a href="https://wa.me/5519987743878?text=Olá%20Gabriel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." class="btn-demo" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:gabriel.santolaja17@email.com" class="btn-github">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="http://www.linkedin.com/in/gabriel-santolaja" class="btn-github" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> LinkedIn
       </a>
     </div>
   </section>
@@ -239,9 +289,6 @@
             </div>
           </div>
           <div class="preview-links">
-            <a id="modalGithubLink" href="#" target="_blank" class="btn-github">
-              <i class="fab fa-github"></i> Ver Código
-            </a>
             <a id="modalDemoLink" href="#" target="_blank" class="btn-demo">
               <i class="fas fa-external-link-alt"></i> Ver Demo Live
             </a>
